@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBM Movies</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- box icons css -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- icons end === -->
+    <!-- fontAwessome -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=rcjWpH0fADoBaH2e2AqwH4MI3_X17yv1x4iNsIP7Lqg6I1DwM6Df14hmez5pwnyRlbWDQAWvLUxmnBrVIIdhkg" charset="UTF-8"></script>
+    <!-- font end -->
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<header class="header">
+    <nav class="nav">
+        <div class="container">
+          <div class="logotip-box">
+              <a href="#" class="logo-link">
+                 <h1 class="logotip-title">KBM ~ Movies</h1>
+              </a>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item">
+                <a href="#TOP10" class="nav-link">TOP-10</a>
+            </li>
+            <li class="nav-item">
+                <a href="#Generes" class="nav-link">Genres</a>
+            </li>
+            <li class="nav-item">
+                <a href="#NEW" class="nav-link">NEW-Movies</a>
+            </li>
+            <li class="nav-item">
+                <a href="#Marvel" class="nav-link">MARVEL</a>
+            </li>
+            <li class="nav-item">
+              <form id="searchForm">
+                <div class="form-box">
+                 <input id="input" type="search" placeholder="Search...">
+                 <button class="btn" type="submit"><i class='bx bx-search'></i></button>
+                </div>
+             </form>
+            </li>
+          </ul>
+          <div class="nav-wrapper">
+            <button id="loginBtn"><i class='bx bx-user-circle'></i></button>
+      </div>
+        </div>
+    </nav>
+</header>
+<main class="main">
+  <section class="search-item">
+      <div class="container">
+        <ul class="item-search">
+          
+        </ul>
+      </div>
+  </section>
+    <section class="intro">
+        <div class="container">
+          <div class="big-box">
+            <div class="intro-info-box">
+              <div class="intro-conanr">
+                <h2 class="intro-title">Eternals</h2>
+                <p class="intro-spanp">8.1 <span>Top 250</span></p>
+                <span class="intro-spn">2021, Fantastic, Triller</span>
+                <p class="intro-text">
+                  Marvel Studios' Eternals features an exciting <br> new team of Super Heroes in the Marvel Cinematic Universe, <br> ancient aliens who have been living on Earth in secret <br>  for thousands of years. Following the events of Avengers: <br> Endgame, an unexpected tragedy forces them out of the <br>  shadows to reunite against mankind's most ancient <br> enemy, the Deviants.
+
+                </p>
+                <div class="intro-btn-box">
+                    <a href="https://www.youtube.com/watch?v=x_me3xsvDgk&list=RDCMUCvC4D8onUfXzvjTOM-dBfEA&index=2" class="intro-ser-btn">Watch triller</a>
+                </div>  
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section class="birnima-section" id="TOP10">
+        <div class="container">
+          <div class="slider-one">
+            <div class="row">
+              <div class="slider-titles">
+                <h2 data-title='Recommended TV shows' class="slider-text">Recommended TV shows</h2>
+              </div>
+            </div>
+            <ul id="list" class="list carousel owl-carousel"></ul>
+          </div>
+          <div class="slider-two">
+            <div class="row">
+              <div class="slider-titles">
+                <h2 data-title='Top 10 of the month' class="slider-text">Top 10 of the month</h2>
+              </div>
+            </div>
+            <ul id="list-two" class="list-two multiple-items">
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/avatar-1.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/avatar-1.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/avatar-1.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/avangers.jpeg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/avangers.jpeg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/avangers.jpeg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/venom-poster-1.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/venom-poster-1.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/venom-poster-1.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/jokerfullmovie.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/jokerfullmovie.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/jokerfullmovie.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/1917movie.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/1917movie.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/1917movie.jpg" width="200" height="300" width="200"
+                    height="300" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/jumangi-1.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/jumangi-1.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/jumangi-1.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/matrix-2.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/matrix-2.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/matrix-2.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/forrest-gump.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/forrest-gump.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/forrest-gump.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/terminator-poster-1.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/terminator-poster-1.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/terminator-poster-1.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/Venom-2.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/Venom-2.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/Venom-2.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/The-Godfather-1972.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/The-Godfather-1972.jpg" width="200" height="300" alt="img">
+                  <img class="image" src="./img/top-10 movies/The-Godfather-1972.jpg" width="200" height="300" alt="img">
+                </div>
+              </li>
+              <li class="list-two-item">
+                <div class="slider-image">
+                  <img class="image" src="./img/top-10 movies/spider-man-far-from-home-poster.jpg" width="200" height="300"
+                    alt="img">
+                  <img class="image" src="./img/top-10 movies/spider-man-far-from-home-poster.jpg" width="200" height="300"
+                    alt="img">
+                  <img class="image" src="./img/top-10 movies/spider-man-far-from-home-poster.jpg" width="200" height="300"
+                    alt="img">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </section>
+    <!-- genres section start -->
+    <section class="genres-section" id="NEW">
+        <div class="container">
+          <div class="slider-three">
+           <div class="row">
+             <div class="slider-titles">
+              <h2 data-title='New items' class="slider-text">New items</h2>
+             </div>
+           </div>
+            <ul id="list-three" class="list-three carousel owl-carousel">
+              <!-- <li class="list-item-three">
+                <div class="three-box">
+                  <div class="imgBox">
+                    <img src="https://picsum.photos/300/200?random=1" width="300" height="200" alt="image">
+                  </div>
+                  <div class="list-three-box">
+                    <div>
+                      <h3>Lorem, ipsum dolor.</h3>
+                    </div>
+                  </div>
+                </div> -->
+            </ul>
+           </div>
+          <div class="slider-four" id="Generes">
+            <div class="row">
+              <div class="slider-titles">
+                <h2 data-title='Genres' class="slider-text">Genres</h2>
+              </div>
+            </div>
+            <ul id="genres-list" class="carousel owl-carousel">
+            <li class="genres-item">
+                <button class="dramma">
+                    <img src="./img/photo_2021-08-24_11-31-31.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="triller">
+                    <img src="./img/photo_2021-08-24_11-31-32 (2).jpg"width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="romentic">
+                    <img src="./img/photo_2021-08-24_11-31-32 (3).jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="action">
+                    <img src="./img/photo_2021-08-24_11-31-32.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="documentary">
+                    <img src="./img/photo_2021-08-24_11-32-07.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="horor">
+                    <img src="./img/photo_2021-08-24_11-32-08.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="animation">
+                    <img src="./img/photo_2021-08-24_11-32-09.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="comedy">
+                    <img src="./img/photo_2021-08-24_11-32-10.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+            <li class="genres-item">
+                <button class="advature">
+                    <img src="./img/photo_2021-08-24_11-32-11.jpg" width="300" height="200" alt="">
+                </button>
+            </li>
+        </ul>
+          </div>
+           <div class="slider-five">
+            <h2 id="new-title"></h2>
+            <ul class="genres-render"></ul>
+           </div>
+        </div>
+    </section>
+    <!-- genres section end -->
+    <!--! .... section start -->
+    <section class="robot-section">
+      <div class="container">
+       <div class="slider-six">
+        <h2 data-title='Android-Robot Movies' class="slider-text">Android-Robot Movies</h2>
+        <ul id="android_robot" class="android_robot carousel owl-carousel"></ul>
+       </div>
+      </div>
+    </section>
+    <!--! .... section start -->
+    <!--! .... section start -->
+    <section class="Fantastic">
+    <div class="container">
+      <div class="slider-seven">
+        <h2 data-title='Fantastic Movies' class="slider-text">Fantastic Movies</h2>
+        <ul id="Fantastic" class="Fantastics carousel owl-carousel"></ul>
+      </div>
+    </div>
+    </section>
+    <!--! .... section start -->
+    <!--! .... section start -->
+    <section class="dc-section">
+      <div class="container">
+      <div class="slider-eight">
+        <h2 data-title='Detective Comics Movies' class="slider-text">Detective Comics Movies</h2>
+        <ul id="DC" class="dc carousel owl-carousel"></ul>
+      </div>
+      </div>
+    </section>
+    <!-- ! .... section end -->
+    <!--! .... section start -->
+    <section class="marvel-section" id="Marvel">
+      <div class="container">
+        <div class="slider-nine">
+          <h2 data-title='Marvel Movies' class="slider-text">Marvel Movies</h2>
+          <ul id="marvelMovies" class="marvelMovies carousel owl-carousel"></ul>
+        </div>
+      </div>
+    </section>
+ 
+    <!-- ! .... section end -->
+    <div id="modal-container">
+      <div class="modal-background">
+        <div class="modal">
+          <div class="modal-info-box">
+            <div class="conanr">
+              <h2 class="modal-title">Lorememmm</h2>
+              <p class="modal-spanp">8.1 <span>Top 250</span></p>
+              <span class="modal-spn">2021, Drama, Triller 2 sezona Russia  18+</span>
+              <p class="modal-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi odio rem quidem cumque vel velit expedita! Atque magnam dolorum et aliquam quod veniam cumque quae, reiciendis ut, possimus temporibus.</p>
+              <div class="modal-btn-box">
+                  <button class="modal-ser-btn">Watch serial</button>
+                  <a href="#" class="modal-triller-btn">Triller</a>
+              </div> 
+            </div>
+            <button class="close-btn">&times;</button> 
+            <ul class="manzil-vid">
+              <img class="imagess modalImg" src="" alt="image">
+            </ul>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+      <!-- ! || Modal for LOG IN || -->
+  <div class="logIn-modal">
+    <div class="modal-content">
+        <div class="form__area">
+          <div class="inner__form">
+            <form action="" id="login__form">
+              <p class="iconss"><i class='bx bx-user-circle'></i></p>
+              <h2 class="form__heading">Login</h2>
+              <div class="input__group">
+                <label for="">Username</label>
+                <i class='bx bx-user' id="icons"></i>
+                <input type="text" id="userName" placeholder="Enter username">
+              </div>
+              <div class="input__group">
+                <label for="">Password</label>
+                <i class='bx bx-lock' id="icons"></i>
+                <input type="text" placeholder="Enter password">
+              </div>
+              <div class="input__group">
+                <label for="">Email</label>
+                <i class='bx bx-mail-send' id="icons"></i>
+                <input type="email" placeholder="E-mail" required>
+              </div>
+              <div class="box">
+                <button id="login-btn">Login</button>
+              <a href="#" class="forget__link">Forget password?</a>
+              </div>
+              <div class="social__links">
+                <p>Or login with</p>
+                <i class='bx bxl-google-plus-circle'></i>
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-twitter'></i>
+                <i class='bx bxl-instagram'></i>
+              </div>
+            </form>
+        </div>
+        <button id="login__close-btn">&times</button>
+    </div>
+    </div>
+  </div>
+<!-- ! || Modal for LOG IN || -->
+</main>
+<footer class="footer section" id="contact">
+  <div class="container">
+      <h2 class="footer-title">Contacts</h2>
+      <p class="footer-text">Want to know more or juct chat? <br> You are welcome!</p>
+      <a href="tel: +998950023752" class="footer-link">Make to call</a>
+      <div class="typed">
+          <h3 class="typed-title">For communication : <span class="anime"></span></h3>
+      </div>
+      <!--  Social media coding -->
+      <div class="wrapper">
+          <div class="icon instagram">
+              <div class="tooltip">Instagram</div>
+              <a href="https://instagram.com/_fullstack_dev_0117"><i class="fab fa-instagram"></i></a>
+          </div>
+          <div class="icon facebook">
+              <div class="tooltip">Facebook</div>
+              <a href=""><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <div class="icon github">
+              <div class="tooltip">GitHub</div>
+              <a href="https://github.com/kamronbey"><i class="fab fa-github"></i></a>
+          </div>
+          <div class="icon whatsapp">
+              <div class="tooltip">WhatsApp</div>
+              <a href=""><i class="fab fa-whatsapp"></i></a>
+          </div>
+      </div>
+      <!-- Social media coding and -->
+      <div class="footer-kbm-box">
+        <p>KBM Developers project 2021.08.31</p>
+      </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./js/typed.js"></script>
+<!-- box icon js link -->
+<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+<!-- icon js end -->
+<!-- Jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/simplePagination.js/1.6/jquery.simplePagination.min.js"></script>
+<!-- Jquery end -->
+<script src="./js/Films.js"></script>
+<script src="./js/qosimcha-jant.js"></script>
+<script src="./js/generes.js"></script>
+<script src="./js/main.js"></script>
+<script>
+ 
+    $(".carousel").owlCarousel({
+       margin: 10,
+       loop: true,
+       autoplay: true,
+       autoplayTimeout: 2000,
+       autoplayHoverPause: true,
+       responsive: {
+           0:{
+               items: 1,
+               nav: true
+           },
+           600:{
+               items: 2,
+               nav: true
+           },
+           1000:{
+               items: 3,
+               nav: true
+           },
+           1200 :{
+                items: 4,
+               nav: true
+           }
+       }
+    });
+    
+$('.multiple-items').slick({
+  infinite: true,
+  slidesToShow: 3,
+  slidesToScroll: 3
+});
+// =========
+// ========================
+window.addEventListener('scroll', e =>{
+   if(this.pageYOffset > 60){
+       document.querySelector('.header').classList.add('sticky');
+   }else{
+    document.querySelector('.header').classList.remove('sticky');
+   }
+});
+</script>
+<!-- Modal script -->
+<script>
+    $('.button').click(function(){
+    var buttonId = $(this).attr('id');
+    $('#modal-container').removeAttr('class').addClass(buttonId);
+    $('body').addClass('modal-active');
+    })
+  
+    $('#modal-container').click(function(){
+    $(this).addClass('out');
+    $('body').removeClass('modal-active');
+    });
+     // !Kamronbek's code=====
+    let slickPrev = document.querySelector('.slick-prev');
+    let slickNext = document.querySelector('.slick-next');
+    slickPrev.innerHTML=`<i class='bx bx-chevrons-left'></i>`;
+    slickNext.innerHTML = `<i class='bx bx-chevrons-right'></i>`;
+  </script>
+<body>
+</body>
+</html>
